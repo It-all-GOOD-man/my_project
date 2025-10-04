@@ -97,5 +97,6 @@ def format_date(today:datetime):
         5: "мая", 6: "июня", 7: "июля", 8: "августа",
         9: "сентября", 10: "октября", 11: "ноября", 12: "декабря"}
     return f"Сегодня {today.day} {russion_format[today.month]} {today.year} года, время: {today.strftime('%H:%M')}"
-
 print(format_date(datetime.now()))
+
+print("Bobby")
