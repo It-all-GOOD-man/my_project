@@ -53,5 +53,20 @@ def fin_calc(summ, procent , years):
     final_amount = final_amount.quantize(Decimal('0.01'))
     prof = final_amount - summ
     return prof
-print(fin_calc(summ=Decimal(input("Введите начальную сумму вклада ")),
-                procent=Decimal(input("Введите процентуню ставку ")), years=Decimal(input("Введите срок вклада в годах "))))
+# print(fin_calc(summ=Decimal(input("Введите начальную сумму вклада ")),
+                # procent=Decimal(input("Введите процентуню ставку ")), years=Decimal(input("Введите срок вклада в годах "))))
+
+# Задание 7
+
+from fractions import Fraction
+
+f1 = Fraction(3, 4)
+f2 = Fraction(5, 6)
+print(f"{f1} + {f2} = {f1 + f2} \n"
+      f"{f1} - {f2} = {f1-f2} \n"
+      f"{f1} * {f2} = {f1*f2} \n"
+      f"{f1} / {f2} = {f1/f2}")
+
+# Задание 8
+
+
