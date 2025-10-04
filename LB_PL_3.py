@@ -42,3 +42,16 @@ def fibonacci(n):
         b = a + b
         k += 1
 for i in fibonacci(5): print(i)
+
+# Задание 6
+
+from decimal import Decimal, getcontext
+
+getcontext().prec = 10
+def fin_calc(summ, procent , years):
+    final_amount = summ*(Decimal("1") + procent/(Decimal("12")*Decimal("100")))**(Decimal("12")*years)
+    final_amount = final_amount.quantize(Decimal('0.01'))
+    prof = final_amount - summ
+    return prof
+print(fin_calc(summ=Decimal(input("Введите начальную сумму вклада ")),
+                procent=Decimal(input("Введите процентуню ставку ")), years=Decimal(input("Введите срок вклада в годах "))))
