@@ -68,5 +68,24 @@ print(f"{f1} + {f2} = {f1 + f2} \n"
       f"{f1} / {f2} = {f1/f2}")
 
 # Задание 8
+from datetime import datetime, date
+n = datetime.now()
 
+print(f"Текущая дата и время: {n}")
+print(f"Только текущая дата: {n.date()}")
+print(f"Только текущее время: {n.time()}")
 
+# Задание 9
+
+birthday = date(year=int(input("Введите год рождения ")),
+                month=int(input("Введите месяц рождения ")),
+                day=int(input("Введите день рождения")))
+print(birthday)
+today = date.today()
+next_bd = date(today.year, birthday.month, birthday.day)
+if next_bd < today:
+    next_bd = date(today.year + 1, birthday.month, birthday.day)
+print(f"День рождения: {birthday}")
+print(f"Сегодня: {today}")
+print(f"Дней прошло с рождения: {(today-birthday).days}")
+print(f"Дней до следующего дня рождения: {(next_bd-today).days}")
