@@ -89,3 +89,13 @@ print(f"День рождения: {birthday}")
 print(f"Сегодня: {today}")
 print(f"Дней прошло с рождения: {(today-birthday).days}")
 print(f"Дней до следующего дня рождения: {(next_bd-today).days}")
+
+# Задание 10
+
+def format_date(today:datetime):
+    russion_format = {1: "января", 2: "февраля", 3: "марта", 4: "апреля",
+        5: "мая", 6: "июня", 7: "июля", 8: "августа",
+        9: "сентября", 10: "октября", 11: "ноября", 12: "декабря"}
+    return f"Сегодня {today.day} {russion_format[today.month]} {today.year} года, время: {today.strftime('%H:%M')}"
+
+print(format_date(datetime.now()))
